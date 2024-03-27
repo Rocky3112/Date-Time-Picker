@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {faqData} from '../demoDB/date'
+import { faqData } from '../demoDB/date'
 
 const FaqSection = () => {
     const [isOpen, setIsOpen] = useState(null);

@@ -6,8 +6,9 @@ import { remindtime } from '../demoDB/date'
 import RightsideElement from './RightsideElement';
 
 const Calendar = () => {
-    const [selectedDate, setSelectedDate] = useState(new Date());
-    const [pickerDate, setPickerDate] = useState(new Date());
+    const currentDate =new Date()
+    const [selectedDate, setSelectedDate] = useState(currentDate);
+    const [pickerDate, setPickerDate] = useState(currentDate);
     const [selectedTime, setSelectedTime] = useState();
     const [selectedRemind, setSelectedRemind] = useState();
     const handleDateChange = date => {
@@ -22,7 +23,7 @@ const Calendar = () => {
     };
     return (
         <div className='pt-20 lg:container lg:mx-auto lg:px-5 mx-3'>
-            <div className='lg:flex gap-10 '>
+            <div className='lg:flex gap-10'>
                 <div className='lg:w-[70%] bg-white p-5 my-16 rounded-xl'>
                     {/* for Staff selection with Dropdown */}
                     <div className='border mb-10 flex justify-between lg:px-5 rounded px-3'>
@@ -124,10 +125,11 @@ const Calendar = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 className='text-xl font-bold pt-5 pb-3'>Leave a note</h2>
-                        <textarea name="" id="" cols="30" rows="6" className='w-full border p-2'></textarea>
+                        <h2 className='text-xl font-bold pt-5 pb-3'>Leave a note(Optional)</h2>
+                        <textarea name="" id="" cols="30" rows="6" className='w-full border p-2' placeholder='Type Max 500 Characters'></textarea>
                     </div>
                 </div>
+                {/* Right side  */}
                 <div className='lg:w-[30%]  bg-white p-5 my-16 rounded-xl'>
                     <RightsideElement handleDateChange={handleDateChange} pickerDate={pickerDate}
                         selectedTime={selectedTime} handleTimeSelect={handleTimeSelect} selectedRemind={selectedRemind}></RightsideElement>
