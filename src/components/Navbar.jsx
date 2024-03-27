@@ -12,15 +12,15 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white shadow-xl fixed z-10 w-full ">
-            <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div className="lg:container lg:mx-auto px-4 py-6 flex justify-between items-center text-black text-wh">
                 <div className="flex items-center space-x-4">
                     <button onClick={toggleMenu} className="lg:hidden text-white focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
 
-                    <div className="lg:text-3xl text-gray-500 font-bold uppercase">
+                    <div className="lg:text-3xl lg:text-gray-500 font-bold uppercase">
                         <img src={logo} alt="" className='h-8' />
                         </div>
                     <div className="hidden lg:flex lg:items-center lg:space-x-6">
@@ -41,7 +41,7 @@ const Navbar = () => {
                 </div>
             </div>
             {menuOpen && (
-                <div className="lg:hidden bg-gray-800 py-4">
+                <div className="lg:hidden bg-gray-300 py-4">
                     <div className="container mx-auto px-4 flex flex-col items-center">
                         <h2 className="text-lg">Features</h2>
                         <h2 className="text-lg">Mission Statement</h2>
