@@ -4,6 +4,8 @@ import { FaUsers } from "react-icons/fa";
 import { dummyName } from '../demoDB/date'
 import { remindtime } from '../demoDB/date'
 import RightsideElement from './RightsideElement';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 const Calendar = () => {
     const currentDate =new Date()
@@ -35,6 +37,18 @@ const Calendar = () => {
                         </select>
                     </div>
                     <div className="">
+                        <div className='flex justify-between px-10 py-5'>
+                            <h2 className='text-lg font-semibold'>Select a Date</h2>
+                            <div className=''>
+                            <DatePicker
+                            selected={pickerDate}
+                            onChange={handleDateChange}
+                            dateFormat="d/MM/yyyy"
+                            showIcon
+                            className='cursor-pointer border rounded'
+                        />
+                            </div>
+                        </div>
                         {/* for date selection */}
                         <div className="lg:flex justify-between gap-5 lg:mx-8  grid grid-cols-3">
                             {days.map((day, index) => (

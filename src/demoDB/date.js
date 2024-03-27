@@ -1,10 +1,11 @@
 export const days = [
-    { day: 'Tue', date: 26, month: 'March',timeAM: '10:00 AM', timePM: '02:00 PM' },
+    
     { day: 'Wed', date: 27, month: 'March', timeAM: '11:00 AM', timePM: '03:00 PM' },
     { day: 'Thu', date: 28, month: 'March',timeAM: '12:00 AM', timePM: '04:00 PM' },
     { day: 'Fri', date: 29, month: 'March',timeAM: '09:00 AM', timePM: '01:00 PM' },
     { day: 'Sat', date: 30, month: 'March', timeAM: '01:00 AM', timePM: '09:00 PM' },
     { day: 'Sun', date: 31, month: 'March', timeAM: '05:00 AM', timePM: '07:00 PM' },
+    { day: 'Mon', date: 1, month: 'April', timeAM: '06:00 AM', timePM: '6:00 PM' },
     
     
   ];
